@@ -7,7 +7,7 @@ To start an LLM server on EBI's HPC, a small hack is required. I have prepared a
 Run the following command on your terminal to allocate a GPU compute node:
 
 ```bash
-ssh -t <your EBI username>@ihpc.ebi.ac.uk "tmux new -A -s sjob 'srun -t 4:00:00 -N1 --gres=gpu:a100:4 --cpus-per-task=16 --mem=32G sh /hps/nobackup/saezrodriguez/paul/auto_exit.sh'"
+ssh -t <your EBI username>@ihpc.ebi.ac.uk "tmux new -A -s sjob 'srun -t 4:00:00 -N1 --gres=gpu:a100:4 --cpus-per-task=16 --mem=32G sh /hps/nobackup/saezrodriguez/ebi_llm_deploy_helper/auto_exit.sh'"
 ```
 
 > **Note**: The command is deliberately written in one line for OS compatibility (Windows/Linux/Mac).
