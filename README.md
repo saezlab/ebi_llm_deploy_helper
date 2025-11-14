@@ -43,10 +43,9 @@ The following are command examples for serving OpenAI OSS 120B using either one 
 ```bash
 cd /hps/nobackup/saezrodriguez/hf_models && \
 singularity exec --nv ../singularity_images/sglang_latest.sif \
-  python -m sglang.launch_server \
+  python -m sglang.launch_server --model-path ./gpt-oss-120b \
     --tp-size <number of the GPUs> \
     --port <available port> \
-    --model-path ./gpt-oss-120b \
     --tool-call-parser gpt-oss \
     --reasoning-parser gpt-oss
 ```
@@ -61,7 +60,7 @@ singularity exec --nv ../singularity_images/vllm-openai_latest.sif \
     --port <available port> \
     --enable-auto-tool-choice \
     --tool-call-parser openai \
-    --reasoning-parser openai
+    --reasoning-parser openai-gptoss
 ```
 
 ## Model split
