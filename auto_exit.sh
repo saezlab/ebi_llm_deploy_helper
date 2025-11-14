@@ -52,7 +52,7 @@ echo "\`\`\`"
 echo "      For more information, refer to the crash course at <URL HERE>."
 echo ""
 echo "  [3] Once your server has started, the base URL of theOpenAI compatible API is as follows."
-echo "\`\`\`
+echo "\`\`\`"
 echo "http://localhost:$available_port/v1/"
 echo "\`\`\`"
 echo ""
