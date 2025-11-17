@@ -44,7 +44,7 @@ The following are command examples for serving OpenAI OSS 120B using either one 
 saez_home=/hps/nobackup/saezrodriguez && \
 HF_HOME=$saez_home/shared_hf_home && \
 singularity exec --nv $saez_home/singularity_images/sglang_latest.sif \
-  python -m sglang.launch_server --model-path ./gpt-oss-120b \
+  python -m sglang.launch_server --model-path openai/gpt-oss-120b \
     --tp-size <number of the GPUs> \
     --port <available port> \
     --tool-call-parser gpt-oss \
@@ -57,7 +57,7 @@ singularity exec --nv $saez_home/singularity_images/sglang_latest.sif \
 saez_home=/hps/nobackup/saezrodriguez && \
 HF_HOME=$saez_home/shared_hf_home && \
 singularity exec --nv $saez_home/singularity_images/vllm-openai_latest.sif \
-  vllm serve ./gpt-oss-120b \
+  vllm serve openai/gpt-oss-120b \
     --tensor-parallel-size <number of the GPUs> \
     --port <available port> \
     --enable-auto-tool-choice \
